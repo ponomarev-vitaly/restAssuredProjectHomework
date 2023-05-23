@@ -5,6 +5,9 @@ public class RestAssuredRunner {
         RestAssured.given()
                 .log().all()
                 .baseUri("https://google.com")
-                .get();
+                .get()
+                .prettyPeek()
+                .then()
+                .statusCode(200);
     }
 }
