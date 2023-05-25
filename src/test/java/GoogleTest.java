@@ -3,15 +3,15 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class GoogleTest {
-//    @BeforeAll
-//    public static void setBaseUrl(){
-//        RestAssured.baseURI = "https://google.com";
-//    }
+    @BeforeAll
+    public static void setBaseUrl(){
+        RestAssured.baseURI = "https://google.com";
+    }
     @Test
-    public static void main(String[] args) {
+    public void checkGoogleHome() {
         RestAssured.given()
                 .log().all()
-                .baseUri("https://google.com")
+                //.baseUri("https://google.com")
                 .get()
                 .prettyPeek()
                 .then()
