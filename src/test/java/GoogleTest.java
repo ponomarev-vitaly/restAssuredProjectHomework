@@ -2,15 +2,16 @@ import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class TestGoogle {
-    @BeforeAll
-    public static void setBaseUrl(){
-        RestAssured.baseURI = "https://google.com";
-    }
+public class GoogleTest {
+//    @BeforeAll
+//    public static void setBaseUrl(){
+//        RestAssured.baseURI = "https://google.com";
+//    }
     @Test
     public static void main(String[] args) {
         RestAssured.given()
                 .log().all()
+                .baseUri("https://google.com")
                 .get()
                 .prettyPeek()
                 .then()
