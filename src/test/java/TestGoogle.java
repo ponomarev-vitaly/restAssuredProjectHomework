@@ -2,7 +2,7 @@ import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class RestAssuredRunner {
+public class TestGoogle {
     @BeforeAll
     public static void setBaseUrl(){
         RestAssured.baseURI = "https://google.com";
@@ -17,3 +17,4 @@ public class RestAssuredRunner {
                 .statusCode(200);
     }
 }
+
